@@ -1,0 +1,32 @@
+<html>
+	<title>Memory Game</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<script src="{{ url_for('static', filename='cards.js') }}"></script>
+	<body>
+		<audio hidden id="flip">
+			<source src="{{ url_for('static', filename='sounds/flip.wav') }}">
+		</audio>
+		<audio hidden id="match">
+			<source src="{{ url_for('static', filename='sounds/match.mp3') }}">
+		</audio>
+		<audio hidden id="gameOver">
+			<source src="{{ url_for('static', filename='sounds/gameOver.wav') }}">
+		</audio>
+		<div class="top">
+			<h1>Memory Game</h1>
+		</div>
+		<div id="player"></div>
+		<div id="pts">Points: </div>
+		<div class="save">
+			<button type="button" onclick="saveGame()">Save Game</button>
+		</div>
+		<div class="new">
+			<button type="button" onclick="newGame()">New Game</button>
+		</div>
+		<div id="moves">
+			<p>Moves left: </p>
+		</div>
+		<div class="sideBox"></div>
+	</body>
+</html>
+
